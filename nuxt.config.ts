@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   
   // Static site generation for GitHub Pages
   nitro: {
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       failOnError: false
@@ -26,8 +27,9 @@ export default defineNuxtConfig({
   ],
   
   // GitHub Pages Configuration
+  // For project pages, use '/repo-name/', for user/org pages use '/'
   app: {
-    baseURL: '/',
+    baseURL: process.env.NUXT_APP_BASE_URL || '/ice-age-nuxt/',
     buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
