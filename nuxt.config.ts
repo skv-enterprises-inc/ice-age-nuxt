@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
+  
   // Static site generation for GitHub Pages
   nitro: {
     prerender: {
@@ -10,51 +11,60 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
     minify: true
   },
+  
   // Ensure proper static generation
   ssr: true,
+  
   // Optimize for static generation
   experimental: {
     payloadExtraction: false
   },
-  css: ['~/assets/css/main.css'],
+  
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
-    '@nuxtjs/i18n'
+    '@nuxtjs/tailwindcss'
   ],
   
   // GitHub Pages Configuration
-  // If deploying to a project page (not user/organization page), set base to '/repo-name/'
-  // For user/organization pages, use '/' or leave empty
   app: {
     baseURL: '/',
     buildAssetsDir: '/_nuxt/',
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1'
+    }
   },
-    // Optimize CSS loading for static generation
-    vite: {
-      css: {
-        devSourcemap: true
-      },
-      build: {
-        rollupOptions: {
-          output: {
-            manualChunks: {
-              vendor: ['vue', 'vue-router'],
-              utils: ['@vueuse/core']
-            }
+  
+  // Optimize CSS loading for static generation
+  vite: {
+    css: {
+      devSourcemap: true
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['vue', 'vue-router']
           }
         }
-      },
-      optimizeDeps: {
-        include: ['vue', 'vue-router', '@vueuse/core']
       }
     },
- // Ensure CSS is properly processed
- postcss: {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}
+    optimizeDeps: {
+      include: ['vue', 'vue-router']
+    }
+  },
+  
+  // Ensure CSS is properly processed
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
+  
+  // Runtime Config for environment variables
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://iceageheatingandac.com'
+    }
   }
-}
 })
