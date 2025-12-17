@@ -1,33 +1,60 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-12-17',
-  devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
-  
-  // Static Site Generation (SSG) Configuration
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: false },
+  // Static site generation for GitHub Pages
   nitro: {
-    preset: 'static',
     prerender: {
-      crawlLinks: true,
-      failOnError: false
-    }
+      routes: ['/sitemap.xml']
+    },
+    compressPublicAssets: true,
+    minify: true
   },
+  // Ensure proper static generation
+  ssr: true,
+  // Optimize for static generation
+  experimental: {
+    payloadExtraction: false
+  },
+  css: ['~/assets/css/main.css'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n'
+  ],
   
   // GitHub Pages Configuration
   // If deploying to a project page (not user/organization page), set base to '/repo-name/'
   // For user/organization pages, use '/' or leave empty
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
-    head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1'
-    }
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
   },
-  
-  // Runtime Config for environment variables
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://iceageheatingandac.com'
-    }
+    // Optimize CSS loading for static generation
+    vite: {
+      css: {
+        devSourcemap: true
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              vendor: ['vue', 'vue-router'],
+              utils: ['@vueuse/core']
+            }
+          }
+        }
+      },
+      optimizeDeps: {
+        include: ['vue', 'vue-router', '@vueuse/core']
+      }
+    },
+ // Ensure CSS is properly processed
+ postcss: {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
   }
+}
 })
