@@ -67,11 +67,11 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-blue-500 mt-1">•</span>
-                  <span>Preventive maintenance to maximize efficiency</span>
+                  <span>Maximize efficiency</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-blue-500 mt-1">•</span>
-                  <span>Extended equipment lifespan protection</span>
+                  <span>Extend equipment lifespan</span>
                 </li>
               </ul>
             </article>
@@ -132,7 +132,7 @@
               </div>
               <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border border-green-200 dark:border-green-800">
                 <p class="text-lg font-bold text-green-700 dark:text-green-400">
-                  ✓ 10 Year warranty on most systems
+                  ✓ 10-Year warranty on most systems
                 </p>
               </div>
             </article>
@@ -194,14 +194,12 @@
                   <span class="text-2xl">📍</span>
                   <div>
                     <p class="text-lg font-semibold text-gray-900 dark:text-white">Southern Wisconsin</p>
-                    <p class="text-gray-600 dark:text-gray-400">Serving communities throughout the region</p>
                   </div>
                 </div>
                 <div class="flex items-center gap-3">
                   <span class="text-2xl">📍</span>
                   <div>
                     <p class="text-lg font-semibold text-gray-900 dark:text-white">Northern Illinois</p>
-                    <p class="text-gray-600 dark:text-gray-400">Proudly serving the area</p>
                   </div>
                 </div>
               </div>
@@ -568,7 +566,7 @@ useHead({
         },
         offers: {
           '@type': 'Offer',
-          description: '10 Year warranty on most systems'
+          description: '10-Year warranty on most systems'
         }
       })
     },

@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   // GitHub Pages Configuration
   // For project pages, use '/repo-name/', for user/org pages use '/'
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/ice-age-nuxt/',
+    baseURL: '/ice-age-nuxt/',
     buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
