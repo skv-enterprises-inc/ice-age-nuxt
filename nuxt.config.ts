@@ -27,9 +27,9 @@ export default defineNuxtConfig({
   ],
   
   // GitHub Pages Configuration
-  // For project pages, use '/repo-name/', for user/org pages use '/'
+  // For custom domain, use '/'. For project pages without custom domain, use '/repo-name/'
   app: {
-    baseURL: '/ice-age-nuxt/',
+    baseURL: '/',
     buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
