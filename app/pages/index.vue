@@ -301,6 +301,11 @@
         </div>
         <div class="border-t border-gray-800 pt-4 landscape:pt-3 md:pt-6 text-center">
           <p class="text-sm landscape:text-xs md:text-base text-gray-400">&copy; {{ currentYear }} Ice Age Heating and AC. All rights reserved.</p>
+          <p class="mt-2 text-sm landscape:text-xs md:text-base text-gray-500">
+            <NuxtLink to="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</NuxtLink>
+            <span class="mx-2">|</span>
+            <NuxtLink to="/terms-of-service" class="hover:text-white transition-colors">Terms & Conditions</NuxtLink>
+          </p>
         </div>
       </div>
     </footer>
