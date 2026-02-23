@@ -159,11 +159,6 @@
             <div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 md:p-8 border border-gray-200 dark:border-gray-700">
               <p class="font-semibold text-gray-900 dark:text-white text-lg mb-1">SKV Enterprises Inc.</p>
               <p class="font-semibold text-gray-900 dark:text-white mb-4">Ice Age Heating and AC</p>
-              <p class="text-gray-700 dark:text-gray-300 mb-1">2671 S. Natures Ridge Rd.</p>
-              <p class="text-gray-700 dark:text-gray-300 mb-4">Beloit, WI 53511</p>
-              <p class="mb-1">
-                <a :href="`tel:${phoneNumber}`" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">{{ phoneNumber }}</a>
-              </p>
               <p>
                 <a :href="`mailto:${emailAddress}`" class="text-blue-600 dark:text-blue-400 hover:underline font-medium break-all">{{ emailAddress }}</a>
               </p>
@@ -194,7 +189,6 @@
 
 <script setup lang="ts">
 const currentYear = new Date().getFullYear()
-const phoneNumber = '(608) 289-3093'
 const emailAddress = 'skventerprisesinc@gmail.com'
 
 useHead({
