@@ -1,0 +1,96 @@
+#contact .jobber-inline-work-request {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+
+#contact iframe.jobber-work-request {
+  width: 100%;
+  max-width: none;
+  min-height: 520px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#contact .jobber-form-shell.is-loaded iframe.jobber-work-request {
+  visibility: visible !important;
+}
+
+#contact .jobber-form-skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.25rem;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 250, 251, 0.95) 0%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.dark #contact .jobber-form-skeleton {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.95) 0%,
+    rgba(17, 24, 39, 0.98) 100%
+  );
+}
+
+#contact .jobber-form-shell.is-loaded .jobber-form-skeleton {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#contact .jobber-form-skeleton-bar {
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(
+    90deg,
+    rgba(229, 231, 235, 0.8) 0%,
+    rgba(243, 244, 246, 1) 50%,
+    rgba(229, 231, 235, 0.8) 100%
+  );
+  background-size: 200% 100%;
+  animation: jobber-shimmer 1.6s ease-in-out infinite;
+}
+
+.dark #contact .jobber-form-skeleton-bar {
+  background: linear-gradient(
+    90deg,
+    rgba(55, 65, 81, 0.8) 0%,
+    rgba(75, 85, 99, 1) 50%,
+    rgba(55, 65, 81, 0.8) 100%
+  );
+  background-size: 200% 100%;
+}
+
+#contact .jobber-form-skeleton-bar--short {
+  width: 62%;
+}
+
+#contact .jobber-form-skeleton-bar--medium {
+  width: 84%;
+}
+
+#contact .jobber-form-skeleton-bar--tall {
+  height: 7.5rem;
+}
+
+@keyframes jobber-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}

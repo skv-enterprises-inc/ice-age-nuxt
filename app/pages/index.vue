@@ -209,43 +209,122 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-10 landscape:py-8 md:py-16 lg:py-20 bg-gray-100 dark:bg-gray-800 transition-colors scroll-mt-[200px] landscape:scroll-mt-[80px] md:scroll-mt-[200px]">
-        <div class="max-w-4xl mx-auto px-4 landscape:px-6 md:px-8">
-          <h2 class="text-3xl landscape:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 landscape:mb-6 md:mb-12 text-center text-gray-900 dark:text-white">
-            Get In Touch
-          </h2>
-          
-          <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 landscape:p-6 md:p-8 lg:p-12">
-            <div class="grid landscape:grid-cols-2 md:grid-cols-2 gap-6 landscape:gap-6 md:gap-8">
-              <div class="flex items-start gap-3 landscape:gap-2 md:gap-4">
-                <div class="bg-blue-100 dark:bg-blue-900/30 rounded-lg p-3 landscape:p-2 md:p-4">
-                  <span class="text-2xl landscape:text-xl md:text-3xl">📞</span>
+      <section id="contact" class="relative py-12 landscape:py-10 md:py-20 lg:py-24 bg-gradient-to-b from-gray-100 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors scroll-mt-[200px] landscape:scroll-mt-[80px] md:scroll-mt-[200px] overflow-hidden">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+          <div class="absolute -top-24 right-0 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+          <div class="absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl" />
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 landscape:px-6 md:px-8">
+          <div class="max-w-3xl mx-auto text-center mb-10 landscape:mb-8 md:mb-14 lg:mb-16">
+            <p class="text-sm landscape:text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-3 landscape:mb-2 md:mb-4">
+              Contact Us
+            </p>
+            <h2 class="text-3xl landscape:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 landscape:mb-3 md:mb-5 text-gray-900 dark:text-white">
+              Let's Get Your Home Comfortable
+            </h2>
+            <p class="text-base landscape:text-sm md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Request service, schedule maintenance, or get a quote. We respond quickly and serve Southern Wisconsin and Northern Illinois.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-5 gap-8 landscape:gap-6 md:gap-10 lg:gap-12 items-start">
+            <div class="lg:col-span-2 space-y-4 landscape:space-y-3 md:space-y-5">
+              <a
+                :href="`tel:${phoneNumber}`"
+                class="group flex items-start gap-4 landscape:gap-3 md:gap-5 rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm p-5 landscape:p-4 md:p-6 shadow-lg shadow-gray-900/5 dark:shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-xl"
+              >
+                <div class="rounded-xl bg-blue-100 dark:bg-blue-900/40 p-3 landscape:p-2.5 md:p-4 text-blue-600 dark:text-blue-300 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                  <svg class="h-6 w-6 landscape:h-5 landscape:w-5 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-1.084 1.45a11.042 11.042 0 01-5.516-5.517l1.45-1.084c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
                 </div>
                 <div>
-                  <h3 class="text-lg landscape:text-base md:text-xl font-semibold mb-1 landscape:mb-1 md:mb-2 text-gray-900 dark:text-white">Phone</h3>
-                  <a :href="`tel:${phoneNumber}`" class="text-base landscape:text-sm md:text-lg text-blue-600 dark:text-blue-400 hover:underline">
-                    {{ phoneNumber || 'Contact us for our phone number' }}
-                  </a>
+                  <p class="text-xs landscape:text-[11px] md:text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">
+                    Call Us
+                  </p>
+                  <p class="text-lg landscape:text-base md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {{ phoneNumber }}
+                  </p>
+                  <p class="mt-1 text-sm landscape:text-xs md:text-sm text-gray-500 dark:text-gray-400">
+                    Speak directly with our team
+                  </p>
                 </div>
-              </div>
-              
-              <div class="flex items-start gap-3 landscape:gap-2 md:gap-4">
-                <div class="bg-green-100 dark:bg-green-900/30 rounded-lg p-3 landscape:p-2 md:p-4">
-                  <span class="text-2xl landscape:text-xl md:text-3xl">✉️</span>
+              </a>
+
+              <a
+                :href="`mailto:${emailAddress}`"
+                class="group flex items-start gap-4 landscape:gap-3 md:gap-5 rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm p-5 landscape:p-4 md:p-6 shadow-lg shadow-gray-900/5 dark:shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-green-200 dark:hover:border-green-800 hover:shadow-xl"
+              >
+                <div class="rounded-xl bg-green-100 dark:bg-green-900/40 p-3 landscape:p-2.5 md:p-4 text-green-600 dark:text-green-300 transition-colors group-hover:bg-green-600 group-hover:text-white">
+                  <svg class="h-6 w-6 landscape:h-5 landscape:w-5 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
                 </div>
-                <div>
-                  <h3 class="text-lg landscape:text-base md:text-xl font-semibold mb-1 landscape:mb-1 md:mb-2 text-gray-900 dark:text-white">Email</h3>
-                  <a :href="`mailto:${emailAddress}`" class="text-base landscape:text-sm md:text-lg text-blue-600 dark:text-blue-400 hover:underline break-all">
-                    {{ emailAddress || 'Contact us for our email address' }}
-                  </a>
+                <div class="min-w-0">
+                  <p class="text-xs landscape:text-[11px] md:text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">
+                    Email Us
+                  </p>
+                  <p class="text-lg landscape:text-base md:text-xl font-semibold text-gray-900 dark:text-white break-all group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    {{ emailAddress }}
+                  </p>
+                  <p class="mt-1 text-sm landscape:text-xs md:text-sm text-gray-500 dark:text-gray-400">
+                    Send details about your project
+                  </p>
                 </div>
+              </a>
+
+              <div class="rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-gray-50/90 dark:bg-gray-800/70 p-5 landscape:p-4 md:p-6">
+                <p class="text-sm landscape:text-xs md:text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-4 landscape:mb-3">
+                  Why homeowners choose us
+                </p>
+                <ul class="space-y-3 landscape:space-y-2.5 text-sm landscape:text-xs md:text-base text-gray-700 dark:text-gray-300">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 text-xs font-bold">✓</span>
+                    <span>All makes and models serviced</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 text-xs font-bold">✓</span>
+                    <span>Honest recommendations and clear communication</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 text-xs font-bold">✓</span>
+                    <span>10-year warranty on most new systems</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            
-            <div class="mt-6 landscape:mt-4 md:mt-8 pt-6 landscape:pt-4 md:pt-8 border-t border-gray-200 dark:border-gray-700">
-              <p class="text-center text-sm landscape:text-xs md:text-base text-gray-600 dark:text-gray-400">
-                Ready to schedule service or get a quote? Reach out to us today and we'll be happy to help!
-              </p>
+
+            <div class="lg:col-span-3">
+              <div class="overflow-hidden rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white dark:bg-gray-900 shadow-2xl shadow-gray-900/10 dark:shadow-black/30">
+                <div class="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 px-6 landscape:px-5 md:px-8 py-6 landscape:py-5 md:py-7">
+                  <h3 class="text-xl landscape:text-lg md:text-2xl font-bold text-white mb-2 landscape:mb-1">
+                    Request Service or Get a Quote
+                  </h3>
+                  <p class="text-sm landscape:text-xs md:text-base text-blue-100">
+                    Tell us what you need and we will follow up with next steps.
+                  </p>
+                </div>
+
+                <div
+                  class="jobber-form-shell relative min-h-[520px] p-5 landscape:p-4 md:p-8 bg-white dark:bg-gray-900"
+                  :class="{ 'is-loaded': jobberFormLoaded }"
+                >
+                  <div aria-hidden="true" class="jobber-form-skeleton">
+                    <div class="jobber-form-skeleton-bar jobber-form-skeleton-bar--medium" />
+                    <div class="jobber-form-skeleton-bar" />
+                    <div class="jobber-form-skeleton-bar" />
+                    <div class="jobber-form-skeleton-bar jobber-form-skeleton-bar--short" />
+                    <div class="jobber-form-skeleton-bar jobber-form-skeleton-bar--tall" />
+                    <div class="jobber-form-skeleton-bar jobber-form-skeleton-bar--medium" />
+                  </div>
+                  <div
+                    id="f37f3556-4765-47fe-972f-be81d4a628d3-2466260"
+                    class="relative z-[2] transition-opacity duration-500"
+                    :class="jobberFormLoaded ? 'opacity-100' : 'opacity-0'"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -264,7 +343,7 @@
             <a :href="`tel:${phoneNumber}`" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 landscape:py-2 md:py-3 px-6 landscape:px-4 md:px-8 rounded-lg transition-colors duration-200 inline-block text-sm landscape:text-xs md:text-base">
               Call to Schedule
             </a>
-            <a :href="`mailto:${emailAddress}?subject=Quote Request`" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2.5 landscape:py-2 md:py-3 px-6 landscape:px-4 md:px-8 rounded-lg transition-colors duration-200 inline-block text-sm landscape:text-xs md:text-base">
+            <a href="#contact" @click.prevent="scrollToSection('contact')" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2.5 landscape:py-2 md:py-3 px-6 landscape:px-4 md:px-8 rounded-lg transition-colors duration-200 inline-block text-sm landscape:text-xs md:text-base">
               Get a Quote
             </a>
           </div>
@@ -313,9 +392,13 @@
 </template>
 
 <script setup lang="ts">
+import '~/assets/css/jobber-embed.css'
+
 const currentYear = new Date().getFullYear()
 const phoneNumber = '+1 (608) 561-7954'
 const emailAddress = 'sam@iceageheatingandac.com'
+const jobberEmbedId = 'f37f3556-4765-47fe-972f-be81d4a628d3-2466260'
+const jobberFormLoaded = ref(false)
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -338,12 +421,79 @@ const scrollToSection = (sectionId: string) => {
   }
 }
 
+onMounted(() => {
+  const container = document.getElementById(jobberEmbedId)
+  if (!container) {
+    jobberFormLoaded.value = true
+    return
+  }
+
+  const markLoaded = () => {
+    jobberFormLoaded.value = true
+  }
+
+  const checkLoaded = () => {
+    const iframe = container.querySelector('iframe.jobber-work-request') as HTMLIFrameElement | null
+    if (!iframe) {
+      return false
+    }
+
+    if (getComputedStyle(iframe).visibility !== 'hidden') {
+      markLoaded()
+      return true
+    }
+
+    return false
+  }
+
+  if (checkLoaded()) {
+    return
+  }
+
+  const observer = new MutationObserver(() => {
+    if (checkLoaded()) {
+      observer.disconnect()
+    }
+  })
+
+  observer.observe(container, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['style', 'class']
+  })
+
+  window.setTimeout(() => {
+    markLoaded()
+    observer.disconnect()
+  }, 8000)
+})
+
 // SEO Configuration
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
 const siteName = 'Ice Age Heating and AC'
 const siteDescription = 'Professional HVAC services for residential customers in Southern Wisconsin and Northern Illinois. Expert heating, cooling, maintenance, repairs, and installations. Quality workmanship and honest service.'
 const siteImage = `${siteUrl}/IceAgeLogo.svg`
+
+// Jobber work request embed
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css',
+      media: 'screen'
+    }
+  ],
+  script: [
+    {
+      src: 'https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js',
+      clienthub_id: jobberEmbedId,
+      form_url: 'https://clienthub.getjobber.com/client_hubs/f37f3556-4765-47fe-972f-be81d4a628d3/public/work_request/embedded_work_request_form?form_id=2466260',
+      tagPosition: 'bodyClose'
+    }
+  ]
+})
 
 // Comprehensive SEO Meta Tags
 useHead({

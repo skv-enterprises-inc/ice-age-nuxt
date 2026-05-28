@@ -26,7 +26,7 @@
             Privacy Policy
           </h1>
           <p class="text-gray-300 dark:text-gray-400 text-base md:text-lg">
-            Ice Age Heating and AC · Last Updated: 2/22/2026
+            Ice Age Heating and AC · Last Updated: 5/28/2026
           </p>
         </div>
       </section>
@@ -55,7 +55,7 @@
               <div class="bg-gray-50 dark:bg-gray-800/60 rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-700">
                 <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2">A. Personal Information</h3>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Name, email address, phone number, service address, service request details.
+                  Name, email address, phone number, service address, service request details. If you submit our online work request form, this information is collected through Jobber, our third-party scheduling and customer management platform.
                 </p>
               </div>
               <div class="bg-gray-50 dark:bg-gray-800/60 rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-700">
@@ -88,7 +88,7 @@
               Sharing Your Information
             </h2>
             <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-4">
-              We may share information with: service technicians or employees; third-party service providers (hosting, analytics); legal authorities when required.
+              We may share information with: service technicians or employees; third-party service providers (hosting, analytics, and Jobber for work request and scheduling services); legal authorities when required.
             </p>
             <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-medium">
               We do not share information for third-party marketing.
@@ -102,7 +102,7 @@
               Cookies and Tracking
             </h2>
             <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              Our Website may use cookies to improve user experience and analyze traffic. You may disable cookies in your browser settings, but some features may not function properly.
+              Our Website may use cookies to improve user experience and analyze traffic. Jobber's embedded work request form may also use cookies or similar technologies as described in Jobber's privacy policy. You may disable cookies in your browser settings, but some features may not function properly.
             </p>
           </section>
 
